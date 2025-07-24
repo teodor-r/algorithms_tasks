@@ -8,8 +8,7 @@ def pow(a:float, n:int):
 
 print(pow(2,10))
 
-#генерация всех чисел  длины M в N-ричной системе счисления
-#почему None?Если бы там был пустой список, то питон 
+
 def generate_numbers(N:int , M: int, prefix = []):
 	if M==0:
 		print(prefix)
@@ -36,10 +35,10 @@ def generate_permuntaions(N:int , M=-1, prefix = None):
 		print(*prefix)
 		return
 	for number in range(1, N+1):
-	 	if find(number,prefix):
-	 		continue
-	 	prefix.append(number)
-	 	generate_permuntaions(N,M-1,prefix)
-	 	prefix.pop()
+		if find(number,prefix):
+			continue
+		prefix.append(number)
+		generate_permuntaions(N,M-1,prefix)
+		prefix.pop()
 
 generate_permuntaions(5)

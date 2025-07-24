@@ -4,7 +4,6 @@ def max_submatrix_sum(matrix):
     n = len(matrix)
     m = len(matrix[0])
 
-    # Префиксные суммы для каждой строки
     prefix_sums = [[0] * (m + 1) for _ in range(n)]
     for i in range(n):
         for j in range(1, m + 1):
@@ -12,13 +11,12 @@ def max_submatrix_sum(matrix):
 
     max_sum = float('-inf')
 
-    # Выбираем левую и правую границы
     for left in range(m):
         for right in range(left, m):
             current_sum = 0
             best_sum = float('-inf')
 
-            # Используем алгоритм Каданэ для столбцов между left и right
+
             for row in range(n):
                 sum_segment = prefix_sums[row][right + 1] - prefix_sums[row][left]
                 current_sum += sum_segment

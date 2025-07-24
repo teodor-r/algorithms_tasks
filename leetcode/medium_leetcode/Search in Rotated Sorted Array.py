@@ -1,6 +1,3 @@
-
-
-
 def binary_search_k(arr,l_i, r_i):
     mid  = int((l_i + r_i)/2)
     if   arr[mid-1] > arr[mid] and arr[mid+1] > arr[mid]  :

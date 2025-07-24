@@ -1,12 +1,6 @@
-"""
-задача похожа  на скобочную последовательность из string_algoritms
-"""
-
 from collections import deque
 from functools import reduce
 import copy
-# примечание deque- двустороння очередь, можно вытаскивать за O(1) с обоих концов
-# В данном случае работаем как со стеком
 s  = deque()
 str_ = input()
 

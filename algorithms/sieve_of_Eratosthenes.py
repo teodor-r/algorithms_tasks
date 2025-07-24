@@ -1,5 +1,3 @@
-# РЕШЕТО ЭРАТОСФЕНА
-
 N = int(input())
 A = [True] * N
 A[0]=A[1]= False

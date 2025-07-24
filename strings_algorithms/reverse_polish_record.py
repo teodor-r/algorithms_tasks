@@ -1,12 +1,5 @@
 from collections import deque
 s = deque()
-"""
-Обратная польска нотация
-
-(2+7) * 5 = [2,7+5*]
-2+7*5 = [2,7,5 * +]
-В стек будем класть только числа
-"""
 
 def reverse_polish_record(A:list):
     operations = {

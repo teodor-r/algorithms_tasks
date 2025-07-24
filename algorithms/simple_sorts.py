@@ -1,19 +1,14 @@
-#
-'''
-'''
 A = []
-A.append(10)# добавить в конец списка 
-len(A)# реальный размер списка 
-x = A.pop()# удалить последний элемент из списка  
+A.append(10)
+len(A)
+x = A.pop()
 
 
-#A[x for x in range(10)] 
 A = []
 for x in range(10):
 	A.append(x**2)
 
 def  insert_sort(A):
-	'''сортировка вставками'''
 	N = len(A)
 	for top in range(1,N):
 		k = top
@@ -22,7 +17,6 @@ def  insert_sort(A):
 			k-=1
 	
 def  choise_sort(A):
-	'''сортировка выбором'''
 	N = len(A)
 	for pos in range(0, N-1):
 		for k in range(pos+1, N):
@@ -31,7 +25,6 @@ def  choise_sort(A):
 
 
 def  bubble_sort(A):
-	'''сортировка пузырьком'''
 	N = len(A)
 	for bypass in range (1, N):
 		for k in range (0, N - bypass):
@@ -46,33 +39,12 @@ def test_sort (sort_algorithm):
 	A_sorted = [1 , 2, 3, 4, 5]
 	sort_algorithm(A)
 	print( "Ok "if A == A_sorted else "Fail")
-     # повторно использумем имя А
-	# при этом то, на что ссылалось А до этого будет удалено
-	#сборщиком мусорa 
-	"""
-	print("testcase #2 :", end = "")
-	A =  list(range(10,20)) + list(range(0,10)
-	A_sorted = list(range(20))
-	sort_algorithm(A)
-	print( "Ok "if A == A_sorted else "Fail")
 
-	print("testcase #3 :", end = "")
-	A = [4 , 2 ,4 ,2 ,1]
-	A_sorted = [1 , 2, 2, 4, 4]
-	sort_algorithm(A)
-	print( "Ok "if A == A_sorted else "Fail")
-	"""
 
 if __name__ == "__main__":
 	test_sort(insert_sort)
 	test_sort(choise_sort)
 	test_sort(bubble_sort)
-'''
-Запись A =[0] * 3 эквивалентна A = [0] + [0] + [0]. Т.е
-списки можно конкатенировать. 
 
-A= B + C - создаться новый список
-
-'''
 
 		

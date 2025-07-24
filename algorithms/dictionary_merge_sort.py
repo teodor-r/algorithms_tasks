@@ -1,10 +1,3 @@
-
-#Сортирует словарь вида ключ: число по значению, при чём сортируются не просто
-#значения, а меняется порядок элементов словаря в соотвествии с сортировкой
-# значений. Устойчива, временная сложность О(n * log n), сложность по памяти
-
-
-
 def get_element(A:dict, a_index):
 	i =0
 	for k,v in A.items():
@@ -20,9 +13,9 @@ def merge(A:dict, B:dict):
 	a_index=0
 	b_index=0
 	while a_index<len(A) and b_index<len(B):
- 		if(list(A.values())[a_index]<=list(B.values())[b_index]):
- 			C.update(get_element(A,a_index)) 
- 			a_index+=1
+		if(list(A.values())[a_index]<=list(B.values())[b_index]):
+			C.update(get_element(A,a_index))
+			a_index+=1
  		else:
  			C.update(get_element(B,b_index)) 
  			b_index+=1
@@ -31,13 +24,7 @@ def merge(A:dict, B:dict):
 	while b_index<len(B):
  		C.update(get_element(B,b_index)); b_index+=1;
 	return C
-#можно сделать и другой интерфейс, где merge будет принимать
-#единственный массив и индексы частей кусков, которые будут
-#сливаться
-# функция сортировки
-# важная замечание: всегда у рекуррентой функции есть 
-# особенный случай, с него всегда и нужно начинать
-# реализацию функции
+
 def merge_sort(A:dict):
 	if len(A)<=1:
 		return

@@ -3,11 +3,10 @@ class Solution:
     # Method to find median
     def Median(self, A, B):
 
-        # Assumption both A and B cannot be empty
         n = len(A)
         m = len(B)
         if (n > m):
-            return self.Median(B, A)  # Swapping to make A smaller
+            return self.Median(B, A)
 
         start = 0
         end = n
@@ -18,7 +17,6 @@ class Solution:
             leftAsize = mid
             leftBsize = realmidinmergedarray - mid
 
-            # checking overflow of indices
             leftA = A[leftAsize - 1] if (leftAsize > 0) else float('-inf')
             leftB = B[leftBsize - 1] if (leftBsize > 0) else float('-inf')
             rightA = A[leftAsize] if (leftAsize < n) else float('inf')
@@ -26,7 +24,6 @@ class Solution:
 
             print(f"leftAsize : {leftAsize}, leftA: {leftA} , rightA: {rightA}")
             print(f"leftBsize : {leftBsize}, leftB: {leftB} , rightB: {rightB}")
-            # if correct partition is done
             if leftA <= rightB and leftB <= rightA:
                 if ((m + n) % 2 == 0):
                     return (max(leftA, leftB) + min(rightA, rightB)) / 2.0

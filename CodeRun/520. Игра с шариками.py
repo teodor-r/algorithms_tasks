@@ -1,13 +1,5 @@
 from math import gcd
-
-"""
-def gcd(a, b):
-    while b:
-        a, b = b, a%b
-    return a
-"""
 n = int(input())
-#print(gcd(126,392))
 
 def sum(a,b,c,d):
     return  a*d + b*c, b*d
